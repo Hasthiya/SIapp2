@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">SIapp</string>
-    <string name="title_activity_message">MessageActivity</string>
+    <string name="app_name">Speech Impediment App</string>
+    <string name="title_activity_message">Message</string>
 </resources>
