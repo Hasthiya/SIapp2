@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +30,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
 
-
+    @Override
+    public void onResume(){
+        super.onResume();
+        TextView message = findViewById(R.id.messageText);
+        message.setText(null);
 
     }
 
@@ -47,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
                 //your action
                 break;
             case R.id.item2:
-                //your action
+                Intent intent = new Intent(getBaseContext(), TutorialActivity.class);
+                startActivity(intent);
                 break;
             default:
                 return super.onOptionsItemSelected(item);
