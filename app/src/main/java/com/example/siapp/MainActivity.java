@@ -8,9 +8,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -31,14 +33,48 @@ public class MainActivity extends AppCompatActivity implements
         readMessgae = (ImageButton) findViewById(R.id.readButton);
         messagetext = (EditText) findViewById(R.id.messageText);
         ImageButton showMessageButton = (ImageButton) findViewById(R.id.showMessageButton);
+        Button button = (Button) findViewById(R.id.button);
+        Button button2 = (Button) findViewById(R.id.button2);
+        Button button3 = (Button) findViewById(R.id.button3);
+
+        button.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Not Yet Implemented",
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Not Yet Implemented",
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Not Yet Implemented",
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+
         final TextView message = (TextView) findViewById(R.id.messageText);
 
         showMessageButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+
+                if(!message.getText().toString().equalsIgnoreCase("")){
                 Intent intent = new Intent(getBaseContext(), MessageActivity.class);
                 intent.putExtra("Message",message.getText().toString());
                 startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Please enter a message to show",
+                            Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -46,7 +82,12 @@ public class MainActivity extends AppCompatActivity implements
 
             @Override
             public void onClick(View arg0) {
-                speakOut();
+                if(!message.getText().toString().equalsIgnoreCase("")) {
+                    speakOut();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Please enter a message to read",
+                            Toast.LENGTH_LONG).show();
+                }
             }
 
         });
@@ -89,7 +130,8 @@ public class MainActivity extends AppCompatActivity implements
 
         switch(item.getItemId()) {
             case R.id.item1:
-                //your action
+                Toast.makeText(getApplicationContext(), "Not Yet Implemented",
+                        Toast.LENGTH_LONG).show();
                 break;
             case R.id.item2:
                 Intent intent = new Intent(getBaseContext(), TutorialActivity.class);
