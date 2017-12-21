@@ -40,24 +40,27 @@ public class MainActivity extends AppCompatActivity implements
         button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Not Yet Implemented",
-                        Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getBaseContext(), MessageActivity.class);
+                intent.putExtra("Message","YES");
+                startActivity(intent);
             }
         });
 
         button2.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Not Yet Implemented",
-                        Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getBaseContext(), MessageActivity.class);
+                intent.putExtra("Message","NO");
+                startActivity(intent);
             }
         });
 
         button3.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Not Yet Implemented",
-                        Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getBaseContext(), MessageActivity.class);
+                intent.putExtra("Message","MAYBE");
+                startActivity(intent);
             }
         });
 

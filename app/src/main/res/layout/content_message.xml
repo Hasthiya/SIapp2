@@ -21,5 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:autoSizeTextType="uniform"
-        android:textColor="@color/messageTextColor"/>
+        android:textColor="@color/messageTextColor"
+        android:gravity="center"/>
 </android.support.constraint.ConstraintLayout>

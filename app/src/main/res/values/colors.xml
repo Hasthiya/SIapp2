@@ -5,4 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="messageTextColor">#000000</color>
+    <color name="messageTextYesColor">#08a500</color>
+    <color name="messageTextNoColor">#d10606</color>
+    <color name="messageTextPlain">#ffffff</color>
 </resources>

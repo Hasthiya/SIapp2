@@ -21,6 +21,16 @@ public class MessageActivity extends AppCompatActivity {
         Intent intent = getIntent();
         TextView messageView = (TextView) findViewById(R.id.messageView);
 
+        if(intent.getStringExtra("Message").equalsIgnoreCase("yes")){
+            messageView.setBackgroundResource(R.color.messageTextYesColor);
+            messageView.setTextColor(getResources().getColor(R.color.messageTextPlain));
+        }
+
+        if(intent.getStringExtra("Message").equalsIgnoreCase("no")){
+            messageView.setBackgroundResource(R.color.messageTextNoColor);
+            messageView.setTextColor(getResources().getColor(R.color.messageTextPlain));
+        }
+
         messageView.setText(intent.getStringExtra("Message"));
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
